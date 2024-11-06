@@ -3,33 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,600&display=swap"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="Static/Style/style.css">
     <title>SMART-TECH</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <a class="navbar-item" href="./index.html"><img src="" alt=""></a>
-            <ul class="navbar-list">
-                <li class="navbar-item">
-                    <a class="navbar-link" href="Templates/smartphones.html">NUESTROS SMARTPHONES</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="Templates/tendencias.html">TENDENCIAS</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="Templates/contactanos.html">CONTÁCTANOS</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="#">NO SE</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo a la izquierda -->
+                <ul class="navbar-list logo">
+                    <li class="navbar-item">
+                        <a class="logo-link" href="./index.html"><img src="./Static/img/LOGO-ST.png" alt="LOGO"></a>      
+                    </li>
+                </ul> 
+                
+                <!-- Enlaces principales en el centro -->
+                <ul class="navbar-list main-links">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="Templates/smartphones.html">NUESTROS SMARTPHONES</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="Templates/tendencias.html">TENDENCIAS</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="Templates/contactanos.html">CONTÁCTANOS</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#">NO SE</a>
+                    </li>
+                </ul>
+        
+                <!-- Enlaces secundarios (carrito y sesión) a la derecha -->
+                <ul class="navbar-list user-links">
+                    <li class="navbar-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="">INICIAR SESION</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
+        <section class="intro-section">
+            <div class="container">
+                <img src="./Static/img/Intro-Section-img.png" alt="">
+            </div>
+            <div class="intro-section">
+                <div class="intro-title">
+                    <h1>Smart-Tech</h1>
+                    <p>¡La revolución tecnológica ha llegado! Descubrí los smartphones que cambiarán tu forma de
+                        conectarte.¡Tu próximo compañero digital te espera!</p>
+                    <button>CALL TO ACTION</button>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="smartphones-section">
+                <h2>Explora nuestra gama alta</h2>
+                <p>¡Lleva la innovación en tu bolsillo! 📱✨ Encuentra los smartphones más increíbles en nuestra tienda. Captura cada
+                    momento con cámaras espectaculares y disfruta de la velocidad de los últimos procesadores</p>
+            </div>
+        </section>
+        <section class="container">
+            <div class="brands-section">
+                <h2>Buscá por marcas</h2>
+            </div>
+        </section>
+        <section class="container">
+            <div class="video-section">
+                <h2>VIDEO</h2>
+            </div>
+        </section>        
+        <section class="container">
+            <div class="sponsors-section">
+                <h2>Nuestros sponsors</h2>
+            </div>
+        </section>
+
     </main>
     <footer>
-        <div></div>
+        <section class="container">
+            <div class="footer-buttons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-owner">
+                <span>&copy; Copyright 2024 <a href="#">SMART-TECH</a> | Creada por <a href="https://github.com/Haroldmont"> HAMONT</a></span>
+            </div>
+        </section>    
     </footer>
 </body>
 </html>
