@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/*------------------------------INICIO-HEADER------------------------------------*/
+header {
+   background: linear-gradient(to right, #1d1f1d, #464745);
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
+}
+
+/* BARRA DE NAVEGACION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navbar-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.navbar-link:hover {
+    color: #8bfab0;
+}
+.logo img {
+    max-height: 80px;                  /* Ajustar el tamaño del logo */
+    width: auto;                       /* Mantener la proporción */
+}
+
+/*------------------------------FIN-HEADER---------------------------------------*/
+
+/*------------------------------INICIO-MAIN--------------------------------------*/
+
+/*------------------------------INTRO-SECTION------------------------------------*/
+/*------------------------------SMARTPHONES-SECTION------------------------------*/
+/*------------------------------BRANDS-SECTION-----------------------------------*/
+/*------------------------------VIDEO-SECTION------------------------------------*/
+/*------------------------------SPONSORS-SECTION---------------------------------*/
+
+/*------------------------------FIN-MAIN-----------------------------------------*/
+
+/*------------------------------INICIO-FOOTER------------------------------------*/
+footer {
+    background-color: #000;
+}
+.footer-section {
+    display: flexbox;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+.footer-buttons {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+.footer-buttons a {
+    color: rgb(194, 167, 79);
+}
+.footer-buttons a i {
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+.footer-owner {
+    text-align: center;
+    padding: 1.5rem;
+    color: whitesmoke;
+    background-color: #f39c12;
+    text-decoration: none;
+}
+/*------------------------------FIN-FOOTER---------------------------------------*/
+
+
+
+/* Opcional: Ajustes para mejorar la visibilidad en dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;        /* Cambia la barra a columna en pantallas pequeñas */
+        align-items: flex-start;       /* Alinea los elementos a la izquierda */
+    }
+    .main-links, .user-links {
+        justify-content: flex-start;   /* Los enlaces se alinean a la izquierda */
+        width: 100%;                    /* Ocupan todo el ancho */
+        margin-top: 10px;               /* Separación entre las secciones */
+    }
+}
