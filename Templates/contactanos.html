@@ -35,6 +35,32 @@
         </nav>
     </header>
     <main>
+        <h1>Complete la información</h1>
+        <form action="https://formspree.io/f/xkgnbpje" method="post">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <br><br>
+                <label for="nombre">Nombre [*]</label>
+                <input type="text" name="" id="" size="10" maxlength="15" required>
+                <label for="apellido">Apellido [*]</label>
+                <input type="text" name="" id="" size="10" maxlength="15" required>
+                <br><br>
+                <label for="dni">DNI</label>
+                <input type="number" name="dni" id="" required>
+                <label for="correo">E-mail</label>
+                <input type="email" name="correo" id="">
+                <br><br>
+                <label for="comentarios">Escriba su consulta</label><br>
+                <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+
+                <br>
+            </fieldset>
+            <br><br>
+            <input type="checkbox" name="condiciones" id="" required>
+            Acepto los términos y condiciones
+            <input type="submit" value="Enviar Datos">
+            <input type="reset" value="Borrar">
+        </form>
     </main>
     <footer>
         <br>
