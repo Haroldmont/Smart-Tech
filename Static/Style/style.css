@@ -8,15 +8,12 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.container {
-    width: 95%;
-    max-width: 1320px;
-    margin: 0 auto;
+#container{
+    margin: 0 10em;
 }
-
 /*------------------------------INICIO-HEADER------------------------------------*/
 header {
-   background: linear-gradient(to right, #1d1f1d, #464745);
+   background: linear-gradient(to bottom, #026163, #464745);
    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
 }
 
@@ -27,6 +24,12 @@ header {
     align-items: center;
     padding: 10px 20px;
 }
+
+.navbar-buttons{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
 .navbar-list {
     display: flex;
     list-style-type: none;
@@ -36,63 +39,211 @@ header {
 .navbar-link {
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    margin: 0 10px;
+    font-size: 0.9em;
+    margin: 0 0.4em;
     transition: color 0.3s ease;
 }
 .navbar-link:hover {
     color: #8bfab0;
 }
 .logo img {
-    max-height: 80px;                  /* Ajustar el tamaño del logo */
+    max-height: 60px;                  /* Ajustar el tamaño del logo */
     width: auto;                       /* Mantener la proporción */
+}
+.user-buttons{
+    display: flex;
+    margin-left: 1.2em;
+    justify-content: end;
+    align-items: center;
+}
+.cart-shopping{
+    font-size: 1.8em;
+}
+.button-login{
+    background-color: #e6fa8b;
+    padding: 1em 0.4em;
+    border-radius: 1.2em;
+    -webkit-border-radius: 1.2em;
+    -moz-border-radius: 1.2em;
+    -ms-border-radius: 1.2em;
+    -o-border-radius: 1.2em;
+    color: #000;
 }
 
 /*------------------------------FIN-HEADER---------------------------------------*/
 
 /*------------------------------INICIO-MAIN--------------------------------------*/
-
+main{
+    background-color: #ffffff;
+}
 /*------------------------------INTRO-SECTION------------------------------------*/
+#intro-section{
+    padding: 14em 0;
+    /*background-color: #8bfab0;*/
+    background-image: url(/Static/img/Smartphone-b.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.intro-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(179, 179, 169, 0.25);
+}
+.intro-title{
+    font-size: 2em;
+    text-align: center;
+}
+.intro-description{
+    font-size: 1.2em;
+    text-align: center;
+}
+.intro-button {
+    margin: 1.5em auto 0;
+    padding: 0.8em 2em;
+}
 /*------------------------------SMARTPHONES-SECTION------------------------------*/
+#smartphones-section{
+    padding: 4em;
+}
+.smartphones-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.smartphones-section h2{
+    padding-bottom: 1em;
+}
 /*------------------------------BRANDS-SECTION-----------------------------------*/
-/*------------------------------VIDEO-SECTION------------------------------------*/
-/*------------------------------SPONSORS-SECTION---------------------------------*/
+#brands-section{
+    padding-top: 4em;
+}
+.brands-tittle{
+    text-align:left;
+    /*background-color: #8bfab0;*/
+}
+.card-section{
+    display: flex;
+    justify-content: space-around;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.8em;
+    padding: 3em 2em;
+    /*background-color: #e6fa8b;*/
+}
+.card-container img{
+    max-width: 150px;
+}
+.card-description{
+    margin-top: 1em;
+    text-align: center;
+    font-style: italic;
+}
 
+/*------------------------------VIDEO-SECTION------------------------------------*/
+#video-section{
+    padding: 10em 0;
+    background-color: #e6fa8b;
+}
+.video-section{
+    display: flex;
+    justify-content: space-between;
+}
+iframe {
+    pointer-events: none; /* Bloquea la interacción con el video */
+  }
+.text-box{
+    padding-left: 8em;
+}
+/*------------------------------SPONSORS-SECTION---------------------------------*/
+#sponsors-section{
+    padding: 5em 0;
+    /*background-color: #fa8bb0;*/
+}
 /*------------------------------FIN-MAIN-----------------------------------------*/
 
 /*------------------------------INICIO-FOOTER------------------------------------*/
 footer {
-    background-color: #000;
+    background-color: #026163;
 }
-.footer-section {
-    display: flexbox;
-    text-align: center;
-    margin-top: 1rem;
-    padding: 1rem 0;
+.footer-primary{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
 }
-.footer-buttons {
-    text-align: center;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    margin: 0 auto;
+.footer-tittle{
+    color: #fff;
+    font-size: 1.8em;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+.footer-tittle:hover{
+    color:#000;
+}
+.footer-icons {
     font-size: 1.5rem;
 }
-.footer-buttons a {
-    color: rgb(194, 167, 79);
-}
-.footer-buttons a i {
-    font-size: 3rem;
-    margin-left: 1rem;
-}
-.footer-owner {
-    text-align: center;
-    padding: 1.5rem;
-    color: whitesmoke;
-    background-color: #f39c12;
+.footer-icons a {
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
-/*------------------------------FIN-FOOTER---------------------------------------*/
+.footer-icons a:hover {
+    color: #000;
+}
+.footer-icons a i {
+    font-size: 1.8em;
+    margin-left: 0.2em;
+}
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    padding: 1em;   
+    background-color: #000;
+}
+.footer-copyright span {
+    display: inline-block;
+    color: whitesmoke;
+}
 
+.footer-copyright a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-copyright a:hover {
+    color: #026163;
+    font-weight: bold;   
+}
+
+/*------------------------------FIN-FOOTER---------------------------------------*/
+/*--------------------------------TENDENCIAS-TEMPLATE---------------------------*/
+#tendencias-section{
+    padding: 6em;
+}
+.videos-container{
+    max-width: 4em;
+}
+/*--------------------------------CONTACTANOS-TEMPLATE---------------------------*/
+#form-section{
+    padding: 6em;
+}
+.form-tittle{
+    padding-bottom: 1.8em;
+}
+.bottom-form{
+    display: flex;
+    justify-content: space-between;
+}
+.check-form{
+
+}
+.buttons-form{
+    padding: 3em;
+}
 
 
 /* Opcional: Ajustes para mejorar la visibilidad en dispositivos móviles */

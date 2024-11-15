@@ -3,44 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Static/Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Static/Style/style.css">
     <title>SMART-TECH</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <a class="navbar-item" href="../index.html"><img src="" alt="">LOGO</a>
-            <ul class="navbar-list">
-                <li class="navbar-item">
-                    <a class="navbar-link" href="./smartphones.html">NUESTROS SMARTPHONES</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="./tendencias.html">TENDENCIAS</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="./contactanos.html">CONTÁCTANOS</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="#">NO SE</a>
-                </li>
-            </ul>
-            <ul class="navbar-list">
-                <li class="navbar-item">
-                    <a class="navbar-link" href="">CARRITO</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="">INICIAR SESION</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="container">
+            <nav class="navbar">
+                <div class="navbar-logo">
+                    <ul class="navbar-list logo">
+                        <li><a class="logo-link" href="../index.html"><img src="../Static/img/LOGO-ST.png" alt="LOGO"></a></li>
+                    </ul> 
+                </div>
+                <div class="navbar-buttons">       
+                    <ul class="navbar-list">
+                        <li><a class="navbar-link" href="./smartphones.html">NUESTROS SMARTPHONES</a></li>
+                        <li><a class="navbar-link" href="./tendencias.html">TENDENCIAS</a></li>
+                        <li><a class="navbar-link" href="./contactanos.html">CONTÁCTANOS</a></li>
+                    </ul>
+                    <!-- Enlaces secundarios (carrito y sesión) a la derecha -->
+                    <ul class="navbar-list">
+                        <div class="user-buttons">
+                            <li><a class="navbar-link button-login" href="#">INICIAR SESION</a></li>
+                            <li><a class="navbar-link cart-shopping" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
+
     </main>
     <footer>
-        <br>
-        <div>&copy; Copyright 2024 <a href="#">SMART-TECH</a> | Creada por
-            <a href="https://github.com/Haroldmont">HAMONT</a>
+        <div id="container">
+            <div class="footer-primary">
+                <div class="footer-tittle">¡El futuro es ahora!</div>
+                <div class="footer-icons">
+                    <a href="https://github.com/Haroldmont"
+                        aria-label="Síguenos en Github"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/IteratedPerson"
+                        aria-label="Síguenos en Twitter"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/smarttech.arg/profilecard/?igsh=aXBjd29yMnUyemdw"
+                        aria-label="Síguenos en Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <span> Copyright 2024 &copy;
+                <a href="https://github.com/Haroldmont" 
+                    target="_blank" rel="noopener noreferrer">
+                    HAMONT
+                </a>
+            </span>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/2067fe5f8f.js" crossorigin="anonymous"></script>
 </body>
 </html>
