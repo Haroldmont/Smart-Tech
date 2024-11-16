@@ -3,33 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Static/Style/style.css">
     <title>SMART-TECH</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <a class="navbar-item" href="./index.html"><img src="" alt=""></a>
-            <ul class="navbar-list">
-                <li class="navbar-item">
-                    <a class="navbar-link" href="Templates/smartphones.html">NUESTROS SMARTPHONES</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="Templates/tendencias.html">TENDENCIAS</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="Templates/contactanos.html">CONTÁCTANOS</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="#">NO SE</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="container">
+            <nav class="navbar">
+                <div class="navbar-logo">
+                    <ul class="navbar-list logo">
+                        <li><a class="logo-link" href="./index.html"><img src="./Static/img/LOGO-ST.png" alt="LOGO"></a></li>
+                    </ul> 
+                </div>
+                <div class="navbar-buttons">       
+                    <ul class="navbar-list">
+                        <li><a class="navbar-link" href="Templates/smartphones.html">NUESTROS SMARTPHONES</a></li>
+                        <li><a class="navbar-link" href="Templates/tendencias.html">TENDENCIAS</a></li>
+                        <li><a class="navbar-link" href="Templates/contactanos.html">CONTÁCTANOS</a></li>
+                    </ul>
+                    <!-- Enlaces secundarios (carrito y sesión) a la derecha -->
+                    <ul class="navbar-list">
+                        <div class="user-buttons">
+                            <li><a class="navbar-link button-login" href="#">INICIAR SESION</a></li>
+                            <li><a class="navbar-link cart-shopping" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
+        <section id="intro-section">
+            <div id="container">
+                <div class="intro-container">
+                    <h1 class="intro-title">Smart-Tech</h1>
+                    <p class="intro-description">¡La revolución tecnológica ha llegado! Descubrí los smartphones que cambiarán tu forma de
+                        conectarte.¡Tu próximo compañero digital te espera!</p>
+                    <button class="intro-button">VER MÁS</button>
+                </div>
+            </div>
+        </section>
+        <section id="smartphones-section">
+            <div id="container">
+                <div class="smartphones-section">
+                    <h2>Explora nuestra gama alta</h2>
+                    <p>¡Lleva la innovación en tu bolsillo! 📱✨ Encuentra los smartphones más increíbles en nuestra tienda. Captura cada
+                        momento con cámaras espectaculares y disfruta de la velocidad de los últimos procesadores
+                    </p>
+                    <div class="card-section">
+                        <div class="card-container">
+                            <img src="/Static/img/Smartphone-a.png" alt="SAMSUNG">
+                            <div class="card-description">LOREM</div>
+                        </div>
+                        <div class="card-container">
+                            <img src="/Static/img/Smartphone-b.png" alt="SAMSUNG">
+                            <div class="card-description">LOREM</div>
+                        </div>
+                        <div class="card-container">
+                            <img src="/Static/img/Smartphone-c.png" alt="SAMSUNG">
+                            <div class="card-description">LOREM</div>
+                        </div>
+                        <div class="card-container">
+                            <img src="/Static/img/Smartphone-a.png" alt="SAMSUNG">
+                            <div class="card-description">LOREM</div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+        <section id="brands-section">
+            <div id="container">
+                <h2 class="brands-tittle">Buscá por marcas</h2>
+                <div class="card-section">
+                    <div class="card-container">
+                        <img src="/Static/img/Brand-Samsung.png" alt="SAMSUNG">
+                        <div class="card-description">SAMSUNG</div>
+                    </div>
+                    <div class="card-container">
+                        <img src="/Static/img/Brand-Xiaomi.png" alt="XIAOMI">
+                        <div class="card-description">XIAOMI</div>
+                    </div>
+                    <div class="card-container">
+                        <img src="/Static/img/Brand-Xiaomi.png" alt="MOTOROLA">
+                        <div class="card-description">MOTOROLA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="video-section">
+            <div id="container">
+                <div class="video-section">
+                    <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/GZ-xGBTvtO4?autoplay=1&controls=0&disablekb=1&modestbranding=1&rel=0&mute=1&loop=1&playlist=GZ-xGBTvtO4" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                    </iframe>
+                    <div class="text-box">
+                        <h2>VIDEO</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet distinctio accusantium dolor, perferendis enim eius
+                            laborum excepturi iusto ut ratione alias quam voluptas quidem illo, deserunt ipsam natus nostrum! Nam?</p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section id="sponsors-section">
+            <div id="container">
+                <div class="sponsors-section">
+                    <h2>Nuestros Sponsors</h2>
+                    <div>Aca va carrusel de sponsors</div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer>
-        <div></div>
+        <div id="container">
+            <div class="footer-primary">
+                <div class="footer-tittle">¡El futuro es ahora!</div>
+                <div class="footer-icons">
+                    <a href="https://github.com/Haroldmont"
+                        aria-label="Síguenos en Github"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/IteratedPerson"
+                        aria-label="Síguenos en Twitter"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/smarttech.arg/profilecard/?igsh=aXBjd29yMnUyemdw"
+                        aria-label="Síguenos en Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <span> Copyright 2024 &copy;
+                <a href="https://github.com/Haroldmont" 
+                    target="_blank" rel="noopener noreferrer">
+                    HAMONT
+                </a>
+            </span>
+        </div>
     </footer>
+    <script src="https://kit.fontawesome.com/2067fe5f8f.js" crossorigin="anonymous"></script>
 </body>
 </html>
