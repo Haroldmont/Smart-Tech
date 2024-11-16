@@ -80,7 +80,7 @@ main{
 #intro-section{
     padding: 14em 0;
     /*background-color: #8bfab0;*/
-    background-image: url(/Static/img/Smartphone-b.png);
+    background-image: url(./Static/img/Smartphone-b.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
