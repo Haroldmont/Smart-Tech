@@ -3,111 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--CSS-->
     <link rel="stylesheet" href="../Static/Style/style.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>SMART-TECH</title>
 </head>
+
 <body>
     <header>
-        <div id="container">
-            <nav class="navbar">
-                <div class="navbar-logo">
-                    <ul class="navbar-list logo">
-                        <li><a class="logo-link" href="../index.html"><img src="../Static/img/LOGO-ST.png" alt="LOGO"></a></li>
-                    </ul> 
-                </div>
-                <div class="navbar-buttons">       
-                    <ul class="navbar-list">
-                        <li><a class="navbar-link" href="./smartphones.html">NUESTROS SMARTPHONES</a></li>
-                        <li><a class="navbar-link" href="./tendencias.html">TENDENCIAS</a></li>
-                        <li><a class="navbar-link" href="./contactanos.html">CONTÁCTANOS</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../Static/img/LOGO-ST.png" alt="LOGO" class="img-fluid" style="max-height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./smartphones.html">NUESTROS SMARTPHONES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./tendencias.html">TENDENCIAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contactanos.html">CONTÁCTANOS</a>
+                        </li>
                     </ul>
-                    <!-- Enlaces secundarios (carrito y sesión) a la derecha -->
-                    <ul class="navbar-list">
-                        <div class="user-buttons">
-                            <li><a class="navbar-link button-login" href="#">INICIAR SESION</a></li>
-                            <li><a class="navbar-link cart-shopping" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        </div>
+                    <ul class="navbar-nav ms-auto">
+                        <button class="btn btn-primary">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">INICIAR SESIÓN</a>
+                            </li>
+                        </button>
                     </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section id="form-section">
-            <div id="container">
-                <div class="form-container">
-                    <div class="form-tittle">
-                        <h1>Complete la información</h1>
-                    </div>
-                    <form action="https://formspree.io/f/xkgnbpje" method="post">
-                        <fieldset>
-                            <legend>Datos Personales</legend>
-                            <br><br>
-                            <label for="nombre">Nombre [*]</label>
-                            <input type="text" name="" id="" size="10" maxlength="15" required>
-                            <label for="apellido">Apellido [*]</label>
-                            <input type="text" name="" id="" size="10" maxlength="15" required>
-                            <br><br>
-                            <label for="dni">DNI</label>
-                            <input type="number" name="dni" id="" required>
-                            <label for="correo">E-mail</label>
-                            <input type="email" name="correo" id="">
-                            <br><br>
-                            <label for="comentarios">Escriba su consulta</label><br>
-                            <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
-                            <br>
-                        </fieldset>
-                        <br>
-                        <div class="bottom-form">
-                            <div class="check-form">
-                                <input type="checkbox" name="condiciones" id="" required>
-                                    Acepto los términos y condiciones
-                            </div>
-                            <div class="buttons-form">
-                                <input class="button-form" type="submit" value="Enviar Datos">
-                                <input class="button-form" type="reset" value="Borrar">
-                            </div>    
-                        </div>
-                    </form>
-                </div>
-            </div>  
-        </section>  
-    </main>
-    <footer>
-        <div id="container">
-            <div class="footer-primary">
-                <div class="footer-tittle">¡El futuro es ahora!</div>
-                <div class="footer-icons">
-                    <a href="https://github.com/Haroldmont"
-                        aria-label="Síguenos en Github"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://x.com/IteratedPerson"
-                        aria-label="Síguenos en Twitter"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/smarttech.arg/profilecard/?igsh=aXBjd29yMnUyemdw"
-                        aria-label="Síguenos en Instagram"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <span> Copyright 2024 &copy;
-                <a href="https://github.com/Haroldmont" 
-                    target="_blank" rel="noopener noreferrer">
-                    HAMONT
-                </a>
-            </span>
+        </nav>
+    </header>
+    <main>
+        <section id="form-section" class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="form-container">
+                            <div class="form-title text-center mb-4">
+                                <h1>Complete la información</h1>
+                            </div>
+                            <form action="https://formspree.io/f/xkgnbpje" method="post"
+                                class="p-4 border rounded shadow">
+                                <fieldset>
+                                    <legend class="mb-4 fw-bold">Datos Personales</legend>
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label">Nombre [*]</label>
+                                        <input type="text" name="nombre" id="nombre" class="form-control" maxlength="15"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="apellido" class="form-label">Apellido [*]</label>
+                                        <input type="text" name="apellido" id="apellido" class="form-control"
+                                            maxlength="15" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dni" class="form-label">DNI</label>
+                                        <input type="number" name="dni" id="dni" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="correo" class="form-label">E-mail</label>
+                                        <input type="email" name="correo" id="correo" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="comentarios" class="form-label">Escriba su consulta</label>
+                                        <textarea name="comentarios" id="comentarios" class="form-control"
+                                            rows="5"></textarea>
+                                    </div>
+                                </fieldset>
+                                <div class="bottom-form mt-4">
+                                    <div class="form-check mb-3">
+                                        <input type="checkbox" name="condiciones" id="condiciones"
+                                            class="form-check-input" required>
+                                        <label for="condiciones" class="form-check-label">Acepto los términos y
+                                            condiciones</label>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button type="submit" class="btn btn-primary">Enviar Datos</button>
+                                        <button type="reset" class="btn btn-secondary">Borrar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>¡El futuro es ahora!</h5>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://github.com/Haroldmont" class="text-white me-3"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/IteratedPerson" class="text-white me-3"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/smarttech.arg/profilecard/?igsh=aXBjd29yMnUyemdw"
+                        class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small>&copy; 2024 <a href="https://github.com/Haroldmont" class="text-white">HAMONT</a></small>
+            </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2067fe5f8f.js" crossorigin="anonymous"></script>
+    <script src="../Static/Scripts/script.js"></script>
 </body>
+
 </html>

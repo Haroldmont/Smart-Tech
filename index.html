@@ -3,159 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--CSS-->    
     <link rel="stylesheet" href="Static/Style/style.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>SMART-TECH</title>
 </head>
 <body>
     <header>
-        <div id="container">
-            <nav class="navbar">
-                <div class="navbar-logo">
-                    <ul class="navbar-list logo">
-                        <li><a class="logo-link" href="./index.html"><img src="./Static/img/LOGO-ST.png" alt="LOGO"></a></li>
-                    </ul> 
-                </div>
-                <div class="navbar-buttons">       
-                    <ul class="navbar-list">
-                        <li><a class="navbar-link" href="Templates/smartphones.html">NUESTROS SMARTPHONES</a></li>
-                        <li><a class="navbar-link" href="Templates/tendencias.html">TENDENCIAS</a></li>
-                        <li><a class="navbar-link" href="Templates/contactanos.html">CONTÁCTANOS</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./Static/img/LOGO-ST.png" alt="LOGO" class="img-fluid" style="max-height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Templates/smartphones.html">NUESTROS SMARTPHONES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Templates/tendencias.html">TENDENCIAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Templates/contactanos.html">CONTÁCTANOS</a>
+                        </li>
                     </ul>
-                    <!-- Enlaces secundarios (carrito y sesión) a la derecha -->
-                    <ul class="navbar-list">
-                        <div class="user-buttons">
-                            <li><a class="navbar-link button-login" href="#">INICIAR SESION</a></li>
-                            <li><a class="navbar-link cart-shopping" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        </div>
+                    <ul class="navbar-nav ms-auto">
+                        <button class="btn btn-primary">
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">INICIAR SESIÓN</a>
+                            </li>
+                        </button>
                     </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
     <main>
-        <section id="intro-section">
-            <div id="container">
-                <div class="intro-container">
-                    <h1 class="intro-title">Smart-Tech</h1>
-                    <p class="intro-description">¡La revolución tecnológica ha llegado! Descubrí los smartphones que cambiarán tu forma de
-                        conectarte.¡Tu próximo compañero digital te espera!</p>
-                    <button class="intro-button">VER MÁS</button>
-                </div>
-            </div>
-        </section>
-        <section id="smartphones-section">
-            <div id="container">
-                <div class="smartphones-section">
-                    <h2>Explora nuestra gama alta</h2>
-                    <p>¡Lleva la innovación en tu bolsillo! 📱✨ Encuentra los smartphones más increíbles en nuestra tienda. Captura cada
-                        momento con cámaras espectaculares y disfruta de la velocidad de los últimos procesadores
-                    </p>
-                    <div class="card-section">
-                        <div class="card-container">
-                            <img src="./Static/img/Smartphone-a.png" alt="SAMSUNG">
-                            <div class="card-description">LOREM</div>
-                        </div>
-                        <div class="card-container">
-                            <img src="./Static/img/Smartphone-b.png" alt="SAMSUNG">
-                            <div class="card-description">LOREM</div>
-                        </div>
-                        <div class="card-container">
-                            <img src="./Static/img/Smartphone-c.png" alt="SAMSUNG">
-                            <div class="card-description">LOREM</div>
-                        </div>
-                        <div class="card-container">
-                            <img src="./Static/img/Smartphone-a.png" alt="SAMSUNG">
-                            <div class="card-description">LOREM</div>
-                        </div>
-                    </div>    
-                </div>
-            </div>
-        </section>
-        <section id="brands-section">
-            <div id="container">
-                <h2 class="brands-tittle">Buscá por marcas</h2>
-                <div class="card-section">
-                    <div class="card-container">
-                        <img src="./Static/img/Brand-Samsung.png" alt="SAMSUNG">
-                        <div class="card-description">SAMSUNG</div>
+        <section id="intro-section" class="py-5 text-center d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Texto de introducción -->
+                    <div class="col-md-6">
+                        <h1 class="intro-title">Smart-Tech</h1>
+                        <p class="intro-description">¡La revolución tecnológica ha llegado! Descubrí los smartphones que cambiarán tu forma de conectarte. ¡Tu próximo compañero digital te espera!</p>
+                        <button class="btn intro-button">QUIERO MI SMARTPHONE</button>
                     </div>
-                    <div class="card-container">
-                        <img src="./Static/img/Brand-Xiaomi.png" alt="XIAOMI">
-                        <div class="card-description">XIAOMI</div>
-                    </div>
-                    <div class="card-container">
-                        <img src="./Static/img/Brand-Xiaomi.png" alt="MOTOROLA">
-                        <div class="card-description">MOTOROLA</div>
+                    <!-- Imagen -->
+                    <div class="col-md-6">
+                        <img class="img-fluid rounded" src="./Static/img/Intro-Section-1.png" alt="Persona sosteniendo un smartphone">
                     </div>
                 </div>
             </div>
         </section>
-        <section id="video-section">
-            <div id="container">
-                <div class="video-section">
-                    <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/GZ-xGBTvtO4?autoplay=1&controls=0&disablekb=1&modestbranding=1&rel=0&mute=1&loop=1&playlist=GZ-xGBTvtO4" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="autoplay; encrypted-media" 
-                    allowfullscreen>
-                    </iframe>
-                    <div class="text-box">
-                        <h2>VIDEO</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet distinctio accusantium dolor, perferendis enim eius
-                            laborum excepturi iusto ut ratione alias quam voluptas quidem illo, deserunt ipsam natus nostrum! Nam?</p>
+        <section id="tendencias-section" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Descubre lo Último en Tecnología de Smartphones</h2>
+                <div class="row g-4">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <h3 class="card-header">Samsung Galaxy S24 Ultra: Poder y Elegancia en un Solo Dispositivo</h3>
+                            <video class="card-img-top" autoplay muted>
+                                <source src="./Static/img/video/Samsung_S24_Ultra.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <p class="card-text">Una joya tecnológica con cámaras avanzadas y batería de larga duración.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <h3 class="card-header">Xiaomi 14T: La Combinación Perfecta de Potencia y Diseño</h3>
+                            <video class="card-img-top" autoplay muted>
+                                <source src="./Static/img/video/Xiaomi_14T.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <p class="card-text">Rendimiento excepcional y diseño futurista para tu día a día.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <h3 class="card-header">Motorola Edge 50 Ultra: Tecnología que Trasciende Límites</h3>
+                            <video class="card-img-top" autoplay muted>
+                                <source src="./Static/img/video/motorola_edge_50_ultra.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <p class="card-text">Innovación y elegancia redefinidas en un smartphone.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>        
-        <section id="sponsors-section">
-            <div id="container">
-                <div class="sponsors-section">
-                    <h2>Nuestros Sponsors</h2>
-                    <div>Aca va carrusel de sponsors</div>
+        </section>
+        <section id="brands-section" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Buscá por marcas</h2>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="brand-card shadow-sm p-3 rounded">
+                            <img src="./Static/img/Brand-Samsung.png" alt="SAMSUNG" class="img-fluid">
+                            <p class="mt-3 font-weight-bold">SAMSUNG</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="brand-card shadow-sm p-3 rounded">
+                            <img src="./Static/img/Brand-Xiaomi.png" alt="XIAOMI" class="img-fluid">
+                            <p class="mt-3 font-weight-bold">XIAOMI</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="brand-card shadow-sm p-3 rounded">
+                            <img src="./Static/img/Brand-Motorola.png" alt="MOTOROLA" class="img-fluid">
+                            <p class="mt-3 font-weight-bold">MOTOROLA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>               
+        <section id="video-section" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/GZ-xGBTvtO4?autoplay=1&controls=0&disablekb=1&modestbranding=1&rel=0&mute=1&loop=1&playlist=GZ-xGBTvtO4" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Tecnología innovadora</h2>
+                        <p>Te presentamos el Samsung Galaxy S24 FE, el smartphone que lleva la innovación al siguiente nivel. Con un diseño elegante y características de alto rendimiento, el Galaxy S24 FE ofrece una experiencia única para los usuarios más exigentes...</p>
+                    </div>
                 </div>
             </div>
         </section>
-
+        <section id="sponsors-section" class="sponsors-section">
+            <div class="sponsor-carousel">
+              <div class="sponsor-container"><img src="./Static/img/Sponsor-1.png" alt="LOGO GLOBANT"></div>
+              <div class="sponsor-container"><img src="./Static/img/Sponsor-2.png" alt="LOGO GADNIC"></div>
+              <div class="sponsor-container"><img src="./Static/img/Sponsor-3.png" alt="LOGO JBL"></div>
+              <div class="sponsor-container"><img src="./Static/img/Sponsor-4.png" alt="LOGO COCA-COLA"></div>
+              <div class="sponsor-container"><img src="./Static/img/Sponsor-5.png" alt="LOGO DESPEGAR"></div>
+              <div class="sponsor-container"><img src="./Static/img/Sponsor-6.png" alt="LOGO MERCADO-LIBRE"></div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <div id="container">
-            <div class="footer-primary">
-                <div class="footer-tittle">¡El futuro es ahora!</div>
-                <div class="footer-icons">
-                    <a href="https://github.com/Haroldmont"
-                        aria-label="Síguenos en Github"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://x.com/IteratedPerson"
-                        aria-label="Síguenos en Twitter"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/smarttech.arg/profilecard/?igsh=aXBjd29yMnUyemdw"
-                        aria-label="Síguenos en Instagram"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>¡El futuro es ahora!</h5>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://github.com/Haroldmont" class="text-white me-3"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/IteratedPerson" class="text-white me-3"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/smarttech.arg/profilecard/?igsh=aXBjd29yMnUyemdw" class="text-white"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <span> Copyright 2024 &copy;
-                <a href="https://github.com/Haroldmont" 
-                    target="_blank" rel="noopener noreferrer">
-                    HAMONT
-                </a>
-            </span>
+            <div class="text-center mt-3">
+                <small>&copy; 2024 <a href="https://github.com/Haroldmont" class="text-white">HAMONT</a></small>
+            </div>
         </div>
     </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2067fe5f8f.js" crossorigin="anonymous"></script>
+    <script src="Static/Scripts/script.js"></script>
 </body>
+
 </html>
