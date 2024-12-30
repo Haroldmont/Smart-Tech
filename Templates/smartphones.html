@@ -53,32 +53,196 @@
     <main>
         <section id="smartphones-section" class="py-4">
             <div class="container">
-                <h2 class="section-title">Nuestros Smartphones</h2>
+                <h1 class="section-title">Nuestros Smartphones</h1>
                 <div class="row" id="productos"></div>
             </div>
         </section>
 
         <section class="py-4">
-            <div id="carrito" class="container carrito-container">
-                <h2>Carrito de Compras</h2>
-                <ul id="lista-carrito"></ul>
-                <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
-                <p>Descuento: $<span id="descuento-carrito">0</span></p>
-                <p>IVA (21%): $<span id="iva-carrito">0</span></p>
-                <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
-                <button class="btn btn-secondary me-2" onclick="vaciarCarrito()">Vaciar Carrito</button>
-                <button class="btn btn-primary" onclick="mostrarCheckout()">Checkout</button>
-            </div>
-
-            <div id="checkout-modal">
-                <div class="checkout-content p-4 bg-light">
-                    <h2>Finalizar Compra</h2>
-                    <p>Subtotal: $<span id="modal-subtotal">0</span></p>
-                    <p>Descuento: $<span id="modal-descuento">0</span></p>
-                    <p>IVA: $<span id="modal-iva">0</span></p>
-                    <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
-                    <button class="btn btn-success me-2" onclick="realizarCompra()">Confirmar Compra</button>
-                    <button class="btn btn-danger" onclick="cerrarCheckout()">Cancelar</button>
+            <div class="container">
+                <div class="row" id="productos">
+                    <!-- Producto Laptop -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-1.png" alt="Laptop" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Galaxy S24 Ultra - $1300</h5>
+                                <p>Stock: <span id="stock-laptop1">10</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Laptop', 800, 'laptop1')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Smartphone -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-2.png" alt="Smartphone" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone - $500</h5>
+                                <p>Stock: <span id="stock-smartphone1">15</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Smartphone', 500, 'smartphone1')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Tablet -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-3.png" alt="Tablet" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet - $300</h5>
+                                <p>Stock: <span id="stock-tablet1">8</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Tablet', 300, 'tablet1')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="productos">
+                    <!-- Producto Laptop -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-1.png" alt="Laptop" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop - $800</h5>
+                                <p>Stock: <span id="stock-laptop2">10</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Laptop', 800, 'laptop2')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Smartphone -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-2.png" alt="Smartphone" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone - $500</h5>
+                                <p>Stock: <span id="stock-smartphone2">15</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Smartphone', 500, 'smartphone2')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Tablet -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-3.png" alt="Tablet" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet - $300</h5>
+                                <p>Stock: <span id="stock-tablet2">8</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Tablet', 300, 'tablet2')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="productos">
+                    <!-- Producto Laptop -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-1.png" alt="Laptop" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop - $800</h5>
+                                <p>Stock: <span id="stock-laptop3">10</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Laptop', 800, 'laptop3')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Smartphone -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-2.png" alt="Smartphone" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone - $500</h5>
+                                <p>Stock: <span id="stock-smartphone3">15</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Smartphone', 500, 'smartphone3')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Tablet -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-3.png" alt="Tablet" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet - $300</h5>
+                                <p>Stock: <span id="stock-tablet3">8</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Tablet', 300, 'tablet3')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="productos">
+                    <!-- Producto Laptop -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-1.png" alt="Laptop" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop - $800</h5>
+                                <p>Stock: <span id="stock-laptop4">10</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Laptop', 800, 'laptop4')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Smartphone -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-2.png" alt="Smartphone" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone - $500</h5>
+                                <p>Stock: <span id="stock-smartphone4">15</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Smartphone', 500, 'smartphone4')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Producto Tablet -->
+                    <div class="col-md-4 producto">
+                        <div class="card p-3">
+                            <img src="../Static/img/samsung-3.png" alt="Tablet" class="card-img-top"> <!-- Imagen del producto -->
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet - $300</h5>
+                                <p>Stock: <span id="stock-tablet4">8</span></p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('Tablet', 300, 'tablet4')">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                
+                
+                <!-- Carrito de Compras -->
+                <div id="carrito" class="mt-4 p-3 border rounded bg-white">
+                    <h2>Carrito de Compras</h2>
+                    <ul id="lista-carrito"></ul>
+                    <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+                    <p>Descuento: $<span id="descuento-carrito">0</span></p>
+                    <p>IVA (21%): $<span id="iva-carrito">0</span></p>
+                    <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+                    <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                    <button class="btn btn-primary" onclick="mostrarCheckout()">Checkout</button>
+                </div>
+            
+                <!-- Modal de Checkout -->
+                <div id="checkout-modal" class="modal" tabindex="-1" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Finalizar Compra</h5>
+                                <button type="button" class="btn-close" onclick="cerrarCheckout()"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Subtotal: $<span id="modal-subtotal">0</span></p>
+                                <p>Descuento: $<span id="modal-descuento">0</span></p>
+                                <p>IVA: $<span id="modal-iva">0</span></p>
+                                <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" onclick="realizarCompra()">Confirmar Compra</button>
+                                <button type="button" class="btn btn-secondary" onclick="cerrarCheckout()">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

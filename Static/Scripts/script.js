@@ -1,56 +1,118 @@
+// Configuración de productos con stock y descuentos
 const productos = {
-    'smartphone-1': { nombre: 'Smartphone-1', precio: 500, stock: 10, descuento: 0.1 },
-    'smartphone-2': { nombre: 'Smartphone-2', precio: 600, stock: 12, descuento: 0.15 },
-    'smartphone-3': { nombre: 'Smartphone-3', precio: 450, stock: 8, descuento: 0.05 },
-    'smartphone-4': { nombre: 'Smartphone-4', precio: 700, stock: 20, descuento: 0 },
-    'smartphone-5': { nombre: 'Smartphone-5', precio: 650, stock: 25, descuento: 0.1 },
-    'smartphone-6': { nombre: 'Smartphone-6', precio: 750, stock: 15, descuento: 0.2 },
-    'smartphone-7': { nombre: 'Smartphone-7', precio: 500, stock: 10, descuento: 0.1 },
-    'smartphone-8': { nombre: 'Smartphone-8', precio: 600, stock: 12, descuento: 0.15 },
-    'smartphone-9': { nombre: 'Smartphone-9', precio: 450, stock: 8, descuento: 0.05 },
-    'smartphone-10': { nombre: 'Smartphone-10', precio: 700, stock: 20, descuento: 0 },
-    'smartphone-11': { nombre: 'Smartphone-11', precio: 650, stock: 25, descuento: 0.1 },
-    'smartphone-12': { nombre: 'Smartphone-12', precio: 750, stock: 15, descuento: 0.2 },
+    laptop1: { 
+        nombre: 'Laptop', 
+        precio: 1300, 
+        stock: 10,
+        descuento: 0.1  // 10% de descuento
+    },
+    smartphone1: { 
+        nombre: 'Smartphone', 
+        precio: 500, 
+        stock: 15,
+        descuento: 0.05  // 5% de descuento
+    },
+    tablet1: { 
+        nombre: 'Tablet', 
+        precio: 300, 
+        stock: 8,
+        descuento: 0  // Sin descuento
+    },
+    laptop2: { 
+        nombre: 'Laptop', 
+        precio: 800, 
+        stock: 10,
+        descuento: 0.1  // 10% de descuento
+    },
+    smartphone2: { 
+        nombre: 'Smartphone', 
+        precio: 500, 
+        stock: 15,
+        descuento: 0.05  // 5% de descuento
+    },
+    tablet2: { 
+        nombre: 'Tablet', 
+        precio: 300, 
+        stock: 8,
+        descuento: 0  // Sin descuento
+    },
+    laptop3: { 
+        nombre: 'Laptop', 
+        precio: 800, 
+        stock: 10,
+        descuento: 0.1  // 10% de descuento
+    },
+    smartphone3: { 
+        nombre: 'Smartphone', 
+        precio: 500, 
+        stock: 15,
+        descuento: 0.05  // 5% de descuento
+    },
+    tablet3: { 
+        nombre: 'Tablet', 
+        precio: 300, 
+        stock: 8,
+        descuento: 0  // Sin descuento
+    },
+    laptop4: { 
+        nombre: 'Laptop', 
+        precio: 800, 
+        stock: 10,
+        descuento: 0.1  // 10% de descuento
+    },
+    smartphone4: { 
+        nombre: 'Smartphone', 
+        precio: 500, 
+        stock: 15,
+        descuento: 0.05  // 5% de descuento
+    },
+    tablet4: { 
+        nombre: 'Tablet', 
+        precio: 300, 
+        stock: 8,
+        descuento: 0  // Sin descuento
+    }
 };
 
-const IVA = 0.21;
+// Constante para el IVA
+const IVA = 0.21;  // 21% de IVA
 
-function generarProductos() {
-    const productosContainer = document.getElementById('productos');
-    Object.keys(productos).forEach(productoKey => {
-        const producto = productos[productoKey];
-        
-        const tarjeta = document.createElement('div');
-        tarjeta.classList.add('card');
-        tarjeta.innerHTML = `
-            <img src="../img/${producto.nombre}.png" alt="${producto.nombre}">
-            <h3>${producto.nombre}</h3>
-            <p>Precio: $${producto.precio}</p>
-            <p>Stock: <span id="stock-${productoKey}">${producto.stock}</span></p>
-            <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, '${productoKey}')">Agregar al carrito</button>
-        `;
-        productosContainer.appendChild(tarjeta);
-    });
-}
+// Inicializar el carrito al cargar la página
+document.addEventListener('DOMContentLoaded', cargarCarrito);
 
+// Función para agregar al carrito
 function agregarAlCarrito(nombre, precio, productoKey) {
+    // Obtener el producto específico
     const producto = productos[productoKey];
 
+    // Validar stock
     if (producto.stock <= 0) {
         alert('¡Producto agotado!');
         return;
     }
 
+    // Obtener el carrito actual del localStorage
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
-    carrito.push({ nombre, precio, productoKey });
+    // Agregar nuevo producto
+    carrito.push({ 
+        nombre: producto.nombre, 
+        precio: producto.precio,
+        productoKey: productoKey
+    });
+    
+    // Reducir stock
     producto.stock--;
     document.getElementById(`stock-${productoKey}`).textContent = producto.stock;
-
+    
+    // Guardar en localStorage
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    
+    // Actualizar vista del carrito
     renderizarCarrito();
 }
 
+// Función para renderizar el carrito
 function renderizarCarrito() {
     const listaCarrito = document.getElementById('lista-carrito');
     const subtotalCarrito = document.getElementById('subtotal-carrito');
@@ -59,53 +121,77 @@ function renderizarCarrito() {
     const totalCarrito = document.getElementById('total-carrito');
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
+    // Limpiar lista anterior
     listaCarrito.innerHTML = '';
     
+    // Totales iniciales
     let subtotal = 0;
     let descuentoTotal = 0;
-
+    
+    // Renderizar cada producto
     carrito.forEach((producto, index) => {
         const productoInfo = productos[producto.productoKey];
         const li = document.createElement('li');
         
+        // Calcular descuento individual
         const descuentoProducto = productoInfo.descuento * producto.precio;
-        li.innerHTML = `${producto.nombre} - $${producto.precio} 
-                        ${productoInfo.descuento > 0 ? `<span class="descuento">(Desc. ${(productoInfo.descuento * 100).toFixed(0)}%: -$${descuentoProducto.toFixed(2)})</span>` : ''}`;
+        const precioConDescuento = producto.precio - descuentoProducto;
         
+        li.innerHTML = `
+            ${producto.nombre} - $${producto.precio} 
+            ${productoInfo.descuento > 0 ? 
+                `<span class="descuento">(Desc. ${(productoInfo.descuento * 100).toFixed(0)}%: 
+                -$${descuentoProducto.toFixed(2)})</span>` 
+                : ''}`
+        ;
+        
+        // Botón para eliminar producto
         const botonEliminar = document.createElement('button');
         botonEliminar.textContent = 'Eliminar';
+        botonEliminar.classList.add('btn', 'btn-danger');
         botonEliminar.onclick = () => eliminarDelCarrito(index);
         
         li.appendChild(botonEliminar);
         listaCarrito.appendChild(li);
         
+        // Sumar al subtotal y descuentos
         subtotal += producto.precio;
         descuentoTotal += descuentoProducto;
     });
-
+    
+    // Calcular IVA
     const ivaTotal = (subtotal - descuentoTotal) * IVA;
     const total = subtotal - descuentoTotal + ivaTotal;
-
+    
+    // Actualizar totales
     subtotalCarrito.textContent = subtotal.toFixed(2);
     descuentoCarrito.textContent = descuentoTotal.toFixed(2);
     ivaCarrito.textContent = ivaTotal.toFixed(2);
     totalCarrito.textContent = total.toFixed(2);
 }
 
+// Función para eliminar un producto del carrito
 function eliminarDelCarrito(index) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
+    // Recuperar el producto para devolver stock
     const producto = productos[carrito[index].productoKey];
     producto.stock++;
     document.getElementById(`stock-${carrito[index].productoKey}`).textContent = producto.stock;
     
+    // Eliminar producto por índice
     carrito.splice(index, 1);
+    
+    // Actualizar localStorage
     localStorage.setItem('carrito', JSON.stringify(carrito));
     
+    // Renderizar de nuevo
     renderizarCarrito();
 }
 
+// Función para vaciar el carrito
 function vaciarCarrito() {
+    // Restaurar stock de todos los productos
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito.forEach(item => {
         const producto = productos[item.productoKey];
@@ -113,45 +199,64 @@ function vaciarCarrito() {
         document.getElementById(`stock-${item.productoKey}`).textContent = producto.stock;
     });
     
+    // Limpiar localStorage
     localStorage.removeItem('carrito');
+    
+    // Renderizar carrito vacío
     renderizarCarrito();
 }
 
+// Función para cargar el carrito al cargar la página
+function cargarCarrito() {
+    // Cargar carrito al iniciar la página
+    renderizarCarrito();
+}
+
+// Funciones de Checkout
 function mostrarCheckout() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    
+    // Validar que hay productos en el carrito
     if (carrito.length === 0) {
         alert('El carrito está vacío');
         return;
     }
     
+    // Mostrar modal de checkout
     const modal = document.getElementById('checkout-modal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     
-    const subtotal = carrito.reduce((total, item) => total + item.precio, 0);
-    const descuento = carrito.reduce((total, item) => total + productos[item.productoKey].descuento * item.precio, 0);
-    const iva = (subtotal - descuento) * IVA;
-    const total = subtotal - descuento + iva;
-
+    // Actualizar totales en el modal
+    const subtotal = parseFloat(document.getElementById('subtotal-carrito').textContent);
+    const descuento = parseFloat(document.getElementById('descuento-carrito').textContent);
+    const iva = parseFloat(document.getElementById('iva-carrito').textContent);
+    const total = parseFloat(document.getElementById('total-carrito').textContent);
+    
     document.getElementById('modal-subtotal').textContent = subtotal.toFixed(2);
     document.getElementById('modal-descuento').textContent = descuento.toFixed(2);
     document.getElementById('modal-iva').textContent = iva.toFixed(2);
     document.getElementById('modal-total').textContent = total.toFixed(2);
 }
 
-function cerrarCheckout() {
-    document.getElementById('checkout-modal').style.display = 'none';
-}
-
 function realizarCompra() {
-    localStorage.removeItem('carrito');
+    // Simular compra
     alert('¡Compra realizada con éxito!');
+    
+    // Vaciar carrito
+    localStorage.removeItem('carrito');
+    
+    // Cerrar modal
+    cerrarCheckout();
+    
+    // Renderizar carrito vacío
     renderizarCarrito();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    generarProductos();
-    renderizarCarrito();
-});
+function cerrarCheckout() {
+    const modal = document.getElementById('checkout-modal');
+    modal.style.display = 'none';
+}
+
 
 const carousel = document.querySelector('.sponsor-carousel');
 const items = Array.from(carousel.children);
